@@ -233,7 +233,8 @@ while maradekpont != "0":
     print("Ebben a körben össszesen {} pontot dobott!".format(dobasokSum))
 
     if int(maradekpont) - int(dobasokSum) >= 0:
-        int(maradekpont) -= int(dobasokSum)
+        int(maradekpont)
+        maradekpont -= int(dobasokSum)
         print("{} pontja maradt!".format(maradekpont))
         pass
 
