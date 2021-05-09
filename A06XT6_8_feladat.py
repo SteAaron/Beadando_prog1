@@ -15,26 +15,29 @@ try:
     ls1 = [] #mély
     ls2 = [] #magas
     ls3 = [] #vegyes
-    ls4 = [] #egyéb
+    #ls4 = [] #egyéb
 
     for sor in file:
         line=sor.strip()
-        # for szo in line:
-            # for betu in szo:
-        print(line)
+
+        #print(line)
         if ('a' or 'á' or 'o' or 'ó' or 'u' or 'ú') in line and ('e' or 'é' or 'i' or 'í' or 'ö' or 'ő' or 'ü' or 'ű') not in line:
             ls1.append(line)
         elif ('a' or 'á' or 'o' or 'ó' or 'u' or 'ú') not in line and ('e' or 'é' or 'i' or 'í' or 'ö' or 'ő' or 'ü' or 'ű') in line:
             ls2.append(line)
         elif ('a' or 'á' or 'o' or 'ó' or 'u' or 'ú') in line and ('e' or 'é' or 'i' or 'í' or 'ö' or 'ő' or 'ü' or 'ű') in line:
             ls3.append(line)
-        else:
-            ls4.append(line)
+        # else:
+        #     ls4.append(line)
 
-    print(ls1)
-    print(ls2)
-    print(ls3)
-    print(ls4)
+    # print(ls1)
+    # print(ls2)
+    # print(ls3)
+    # print(ls4)
+
+    print(ls1, file = kimely)
+    print(ls2, file = kimagas)
+    print(ls3, file = kivegyes)
 
     file.close()
     kimely.close()

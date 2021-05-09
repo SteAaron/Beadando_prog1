@@ -1,4 +1,3 @@
-
 kiszallok = {
     "170": ["T20", "T20", "50"],
     "167": ["T20", "T19", "50"],
@@ -177,9 +176,9 @@ def nagypont():
 
 
 
-maradekpont=input("Adja meg, mennyi pontot kell még dobni: ")
+maradekpont=int(input("Adja meg, mennyi pontot kell még dobni: "))
 
-while maradekpont != "0":
+while maradekpont != 0:
 
     elso_dobas = 0
     masodik_dobas = 0
@@ -209,7 +208,7 @@ while maradekpont != "0":
     elif elso_dobas[0] == 'S':
         elso_dobas = 1*int(elso_dobas[1::])
     else:
-        pass
+        elso_dobas = 0
 
     if masodik_dobas[0] == 'T':
         masodik_dobas = 3 * int(masodik_dobas[1::])
@@ -218,7 +217,7 @@ while maradekpont != "0":
     elif masodik_dobas[0] == 'S':
         masodik_dobas = 1 * int(masodik_dobas[1::])
     else:
-        pass
+        masodik_dobas = 0
 
     if harmadik_dobas[0] == 'T':
         harmadik_dobas = 3 * int(harmadik_dobas[1::])
@@ -227,9 +226,9 @@ while maradekpont != "0":
     elif harmadik_dobas[0] == 'S':
         harmadik_dobas = 1 * int(harmadik_dobas[1::])
     else:
-        pass
+        harmadik_dobas = 0
 
-    dobasokSum = elso_dobas + masodik_dobas + harmadik_dobas
+    dobasokSum = int(elso_dobas + masodik_dobas + harmadik_dobas)
     print("Ebben a körben össszesen {} pontot dobott!".format(dobasokSum))
 
     if int(maradekpont) - int(dobasokSum) >= 0:
